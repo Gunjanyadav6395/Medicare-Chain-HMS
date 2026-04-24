@@ -1,0 +1,5 @@
+@import "tailwindcss";
+.force-left-shift {
+  margin-left: 200px !important;
+  justify-content: flex-start !important;
+}
