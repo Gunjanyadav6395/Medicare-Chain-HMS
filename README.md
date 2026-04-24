@@ -157,13 +157,13 @@ https://your-demo-link.com
 ```
 
 ---
-
-## 📸 Screenshots
-
 ## 📸 Screenshots
 
 ### 🏠 Home Page
 ![Home](screenshots/home-hero.png)
+
+### 🔐 Role Based Login
+![Login](screenshots/role-based-login.png)
 
 ### 👤 Dashboard
 ![Dashboard](screenshots/dashboard.png)
