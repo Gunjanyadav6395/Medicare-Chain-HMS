@@ -127,7 +127,7 @@ const MyReports = () => {
       formData.append("hospitalName", hospitalName);
       formData.append("notes", notes);
       formData.append("file", file);
-      formData.append("createdBy",  DEV_CREATED_BY);
+      formData.append("createdBy", DEV_CREATED_BY);
 
       const res = await fetch(`${API_BASE}/api/reports`, {
         method: "POST",
@@ -318,9 +318,9 @@ const MyReports = () => {
     <div className="min-h-screen bg-gray-50">
       <Navbar />
 
-      <div className="max-w-6xl mx-auto px-4 py-8">
-        <div className="bg-white rounded-3xl shadow-md border border-gray-100 p-6 md:p-8">
-          <div className="flex items-center justify-between gap-4 mb-8">
+      <div className="max-w-6xl mx-auto px-4 py-4">
+        <div className="bg-white rounded-3xl shadow-md border border-gray-100 p-4 md:p-5">
+          <div className="flex items-center justify-between gap-3 mb-4">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
               My Reports
             </h2>
@@ -331,15 +331,15 @@ const MyReports = () => {
 
           <form
             onSubmit={handleUpload}
-            className="bg-slate-50 border border-slate-200 rounded-2xl p-4 md:p-6 mb-8"
+            className="bg-slate-50 border border-slate-200 rounded-2xl p-3 md:p-4 mb-4"
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
               <input
                 type="text"
                 placeholder="Report Title"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                className="w-full border border-slate-300 px-4 py-3 rounded-xl outline-none focus:border-blue-500"
+                className="w-full border border-slate-300 px-4 py-2 rounded-xl outline-none focus:border-blue-500"
               />
 
               <input
@@ -347,7 +347,7 @@ const MyReports = () => {
                 placeholder="Report Type"
                 value={reportType}
                 onChange={(e) => setReportType(e.target.value)}
-                className="w-full border border-slate-300 px-4 py-3 rounded-xl outline-none focus:border-blue-500"
+                className="w-full border border-slate-300 px-4 py-2 rounded-xl outline-none focus:border-blue-500"
               />
 
               <input
@@ -355,14 +355,14 @@ const MyReports = () => {
                 placeholder="Doctor Name"
                 value={doctorName}
                 onChange={(e) => setDoctorName(e.target.value)}
-                className="w-full border border-slate-300 px-4 py-3 rounded-xl outline-none focus:border-blue-500"
+                className="w-full border border-slate-300 px-4 py-2 rounded-xl outline-none focus:border-blue-500"
               />
 
               <input
                 type="date"
                 value={recordDate}
                 onChange={(e) => setRecordDate(e.target.value)}
-                className="w-full border border-slate-300 px-4 py-3 rounded-xl outline-none focus:border-blue-500"
+                className="w-full border border-slate-300 px-4 py-2 rounded-xl outline-none focus:border-blue-500"
               />
 
               <input
@@ -370,7 +370,7 @@ const MyReports = () => {
                 placeholder="Hospital Name"
                 value={hospitalName}
                 onChange={(e) => setHospitalName(e.target.value)}
-                className="w-full border border-slate-300 px-4 py-3 rounded-xl outline-none focus:border-blue-500"
+                className="w-full border border-slate-300 px-4 py-2 rounded-xl outline-none focus:border-blue-500"
               />
 
               <input
@@ -378,23 +378,21 @@ const MyReports = () => {
                 type="file"
                 accept=".pdf,image/*"
                 onChange={(e) => setFile(e.target.files[0])}
-                className="w-full border border-slate-300 px-4 py-3 rounded-xl bg-white"
+                className="w-full border border-slate-300 px-4 py-2 rounded-xl bg-white"
               />
 
               <textarea
                 placeholder="Notes (optional)"
                 value={notes}
                 onChange={(e) => setNotes(e.target.value)}
-                rows="3"
-                className="w-full border border-slate-300 px-4 py-3 rounded-xl outline-none focus:border-blue-500 md:col-span-2"
+                rows="2"
+                className="w-full border border-slate-300 px-4 py-2 rounded-xl outline-none focus:border-blue-500 md:col-span-2"
               />
-            </div>
 
-            <div className="mt-5">
               <button
                 type="submit"
                 disabled={uploading}
-                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl transition disabled:opacity-60"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-xl transition disabled:opacity-60"
               >
                 {uploading ? "Uploading..." : "Upload Report"}
               </button>
@@ -402,10 +400,10 @@ const MyReports = () => {
           </form>
 
           {!loading && !error && reports.length > 0 && (
-            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 md:p-6 mb-8">
-              <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-3 md:p-4 mb-4">
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
                 <div className="w-full">
-                  <label className="block text-sm font-semibold text-slate-700 mb-2">
+                  <label className="block text-sm font-semibold text-slate-700 mb-1">
                     Search
                   </label>
                   <input
@@ -413,18 +411,18 @@ const MyReports = () => {
                     placeholder="Search title, hospital, doctor..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full border border-slate-300 px-4 py-3 rounded-xl outline-none focus:border-blue-500 bg-white"
+                    className="w-full border border-slate-300 px-4 py-2 rounded-xl outline-none focus:border-blue-500 bg-white"
                   />
                 </div>
 
                 <div className="w-full">
-                  <label className="block text-sm font-semibold text-slate-700 mb-2">
+                  <label className="block text-sm font-semibold text-slate-700 mb-1">
                     Filter by Type
                   </label>
                   <select
                     value={typeFilter}
                     onChange={(e) => setTypeFilter(e.target.value)}
-                    className="w-full border border-slate-300 px-4 py-3 rounded-xl outline-none focus:border-blue-500 bg-white"
+                    className="w-full border border-slate-300 px-4 py-2 rounded-xl outline-none focus:border-blue-500 bg-white"
                   >
                     {uniqueReportTypes.map((type) => (
                       <option key={type} value={type}>
@@ -435,13 +433,13 @@ const MyReports = () => {
                 </div>
 
                 <div className="w-full">
-                  <label className="block text-sm font-semibold text-slate-700 mb-2">
+                  <label className="block text-sm font-semibold text-slate-700 mb-1">
                     Filter by Date
                   </label>
                   <select
                     value={dateFilter}
                     onChange={(e) => setDateFilter(e.target.value)}
-                    className="w-full border border-slate-300 px-4 py-3 rounded-xl outline-none focus:border-blue-500 bg-white"
+                    className="w-full border border-slate-300 px-4 py-2 rounded-xl outline-none focus:border-blue-500 bg-white"
                   >
                     <option value="All">All</option>
                     <option value="Today">Today</option>
@@ -451,13 +449,13 @@ const MyReports = () => {
                 </div>
 
                 <div className="w-full">
-                  <label className="block text-sm font-semibold text-slate-700 mb-2">
+                  <label className="block text-sm font-semibold text-slate-700 mb-1">
                     Sort by Date
                   </label>
                   <select
                     value={sortOrder}
                     onChange={(e) => setSortOrder(e.target.value)}
-                    className="w-full border border-slate-300 px-4 py-3 rounded-xl outline-none focus:border-blue-500 bg-white"
+                    className="w-full border border-slate-300 px-4 py-2 rounded-xl outline-none focus:border-blue-500 bg-white"
                   >
                     <option value="Newest">Newest First</option>
                     <option value="Oldest">Oldest First</option>
@@ -474,7 +472,7 @@ const MyReports = () => {
                       setSortOrder("Newest");
                       setCurrentPage(1);
                     }}
-                    className="w-full bg-gray-600 hover:bg-gray-700 text-white font-semibold px-6 py-3 rounded-xl transition"
+                    className="w-full bg-gray-600 hover:bg-gray-700 text-white font-semibold px-6 py-2 rounded-xl transition"
                   >
                     Clear Filters
                   </button>
@@ -484,26 +482,23 @@ const MyReports = () => {
           )}
 
           {!loading && !error && reports.length > 0 && (
-            <p className="text-sm md:text-base text-slate-600 mb-6">
-              Showing <span className="font-semibold">{filteredReports.length}</span> of{" "}
+            <p className="text-sm md:text-base text-slate-600 mb-3">
+              Showing{" "}
+              <span className="font-semibold">{filteredReports.length}</span> of{" "}
               <span className="font-semibold">{reports.length}</span> reports
             </p>
           )}
 
-          {loading && (
-            <p className="text-slate-600 text-lg">Loading reports...</p>
-          )}
+          {loading && <p className="text-slate-600 text-lg">Loading reports...</p>}
 
-          {error && (
-            <p className="text-red-600 text-lg font-medium">{error}</p>
-          )}
+          {error && <p className="text-red-600 text-lg font-medium">{error}</p>}
 
           {!loading && !error && reports.length === 0 && (
-            <div className="border border-dashed border-slate-300 rounded-2xl p-10 text-center">
+            <div className="border border-dashed border-slate-300 rounded-2xl p-6 text-center">
               <p className="text-2xl font-semibold text-slate-700">
                 No reports uploaded yet.
               </p>
-              <p className="text-slate-500 mt-2">
+              <p className="text-slate-500 mt-1">
                 Your uploaded medical reports will appear here.
               </p>
             </div>
@@ -513,11 +508,11 @@ const MyReports = () => {
             !error &&
             reports.length > 0 &&
             filteredReports.length === 0 && (
-              <div className="border border-dashed border-slate-300 rounded-2xl p-10 text-center">
+              <div className="border border-dashed border-slate-300 rounded-2xl p-6 text-center">
                 <p className="text-2xl font-semibold text-slate-700">
                   No matching reports found.
                 </p>
-                <p className="text-slate-500 mt-2">
+                <p className="text-slate-500 mt-1">
                   Try changing the search, filters, or sort.
                 </p>
               </div>
@@ -528,19 +523,19 @@ const MyReports = () => {
             reports.length > 0 &&
             filteredReports.length > 0 && (
               <>
-                <div className="grid gap-5">
+                <div className="grid gap-3">
                   {paginatedReports.map((report) => (
                     <div
                       key={report._id}
-                      className="bg-white border border-slate-200 rounded-2xl p-5 md:p-6 shadow-sm hover:shadow-md transition"
+                      className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm hover:shadow-md transition"
                     >
-                      <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-5">
+                      <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3">
                         <div>
                           <h3 className="text-2xl font-bold text-slate-900">
                             {report.title}
                           </h3>
 
-                          <div className="mt-3 space-y-2 text-slate-600">
+                          <div className="mt-2 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-1 text-slate-600">
                             <p>
                               <span className="font-semibold text-slate-800">
                                 Type:
@@ -589,10 +584,10 @@ const MyReports = () => {
                           </div>
                         </div>
 
-                        <div className="flex gap-3 flex-wrap">
+                        <div className="flex gap-2 flex-wrap md:justify-end">
                           <Link
                             to={`/reports/${report._id}`}
-                            className="bg-slate-700 hover:bg-slate-800 text-white font-semibold px-5 py-2.5 rounded-xl transition"
+                            className="bg-slate-700 hover:bg-slate-800 text-white font-semibold px-4 py-2 rounded-xl transition"
                           >
                             Details
                           </Link>
@@ -600,7 +595,7 @@ const MyReports = () => {
                           <button
                             type="button"
                             onClick={() => openPreview(report)}
-                            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-2.5 rounded-xl transition"
+                            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-xl transition"
                           >
                             View
                           </button>
@@ -610,7 +605,7 @@ const MyReports = () => {
                             download={`${
                               report.title?.replace(/\s+/g, "-") || "report"
                             }.${getFileExtension(report.fileUrl)}`}
-                            className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-5 py-2.5 rounded-xl transition"
+                            className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-4 py-2 rounded-xl transition"
                           >
                             Download
                           </a>
@@ -619,7 +614,7 @@ const MyReports = () => {
                             type="button"
                             onClick={() => handleDelete(report._id)}
                             disabled={deletingId === report._id}
-                            className="bg-red-600 hover:bg-red-700 text-white font-semibold px-5 py-2.5 rounded-xl transition disabled:opacity-60"
+                            className="bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded-xl transition disabled:opacity-60"
                           >
                             {deletingId === report._id ? "Deleting..." : "Delete"}
                           </button>
@@ -630,7 +625,7 @@ const MyReports = () => {
                 </div>
 
                 {totalPages > 1 && (
-                  <div className="mt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                  <div className="mt-4 flex flex-col md:flex-row items-center justify-between gap-3">
                     <p className="text-sm text-slate-600">
                       Page <span className="font-semibold">{currentPage}</span> of{" "}
                       <span className="font-semibold">{totalPages}</span>
@@ -669,7 +664,9 @@ const MyReports = () => {
                       <button
                         type="button"
                         onClick={() =>
-                          setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+                          setCurrentPage((prev) =>
+                            Math.min(prev + 1, totalPages)
+                          )
                         }
                         disabled={currentPage === totalPages}
                         className="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold transition disabled:opacity-50"
