@@ -165,8 +165,8 @@ https://your-demo-link.com
 ### 🔐 Role Based Login
 ![Login](screenshots/role-based-login.png)
 
-### 👤 Patient-Dashboard
-![Patient-Dashboard](screenshots/patient-dashboard.png)
+## 👤 Patient Dashboard
+![Patient Dashboard](screenshots/patient-dashboard.png)
 
 ### 📅 Appointments
 ![Appointments](screenshots/appointments.png)
