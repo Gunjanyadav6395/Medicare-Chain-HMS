@@ -171,8 +171,8 @@ https://your-demo-link.com
 ### 📅 My Appointments
 ![My Appointments](screenshots/my-appointments.png)
 
-### 📄 Reports
-![Reports](screenshots/reports.png)
+### 📄 My Reports
+![My Reports](screenshots/my-reports.png)
 
 ---
 
