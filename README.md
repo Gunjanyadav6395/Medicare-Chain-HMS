@@ -174,6 +174,8 @@ https://your-demo-link.com
 ### 📄 My Reports
 ![My Reports](screenshots/my-reports.png)
 
+## 👤 Doctor Dashboard
+![Doctor Dashboard](screenshots/doctor-dashboard.png)
 ---
 
 ## 🧠 Learning Outcomes
