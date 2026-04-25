@@ -177,6 +177,72 @@ https://your-demo-link.com
 ## 👤 Doctor Dashboard
 ![Doctor Dashboard](screenshots/doctor-dashboard.png)
 ---
+---
+
+## 🧪 Testing & Quality Assurance
+
+### 🔍 Testing Approach
+
+Performed manual testing to ensure system reliability, functionality, and data integrity across all modules.
+
+---
+
+### ✅ Testing Types Covered
+
+- Functional Testing (Login, Appointment, Services)
+- Regression Testing (after bug fixes)
+- Integration Testing (Frontend ↔ Backend ↔ Database)
+- API Testing using Postman
+
+---
+
+### 🧾 Test Case Design
+
+- Designed and executed **30+ test cases**
+- Covered:
+  - Login & Authentication
+  - Appointment Booking
+  - Payment Flow
+  - Report Upload
+  - Role-based access (Patient/Doctor/Admin)
+
+---
+
+### 🐞 Defect Management
+
+- Identified and reported bugs during testing
+- Followed **Bug Lifecycle**:
+  - New → Assigned → Open → Fixed → Retest → Closed
+- Retested fixed issues to ensure stability
+
+---
+
+### 🔗 API Testing
+
+- Tested REST APIs using Postman
+- Verified:
+  - Request/Response
+  - Status Codes (200, 400, 500)
+  - Data accuracy
+
+---
+
+### 🗄️ Database Validation
+
+- Used SQL queries to validate backend data
+- Ensured:
+  - Data consistency
+  - Correct storage of appointments, users, and reports
+
+---
+
+### 🎯 Key Outcome
+
+- Improved system reliability
+- Reduced functional errors
+- Ensured smooth user experience across modules
+
+---
 
 ## 🧠 Learning Outcomes
 
